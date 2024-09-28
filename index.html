@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocho Reinas </title>
+    <style>
+        table,td{
+            border: 1px solid  black;
+            border-collapse: collapse;
+            width: 400px; /*Se aplica a la tabla*/
+            height: 50px;
+
+        }
+
+        tr:nth-child(even)
+        td:nth-child(even),
+
+        tr:nth-child(odd)
+        td:nth-child(odd){
+            background-color: #e2ca8e; 
+        }
+
+
+        tr:nth-child(odd)
+        td:nth-child(even),
+
+        tr:nth-child(even)
+        td:nth-child(odd){
+            background-color: #af6d39;  
+     }
+    </style>
+
+    <script>
+        contador = 0;
+      function cellCick(celda){
+
+          
+
+            if (window.getComputedStyle(celda).backgroundImage=="none") {
+
+                if (contador < 8) {
+
+                    celda.style =`background-image:url(./img/queen.png);
+                                    background-size:50px; 
+                                    background-repeat:no-repeat;
+                                    background-position:center;
+                                 `;
+                    
+                    document.getElementById("contador").innerHTML=`Contador: ${++contador}`;
+                    
+                }
+                
+                
+
+            } else {
+                celda.style ="background-image:none";
+                document.getElementById("contador").innerHTML=`Contador: ${--contador}`;
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+            <td onclick="cellCick(this)"></td>
+        </tr>       
+    </table>
+    <h1><p id="contador">Contador: 0</p></h1>
+</body>
+</html>
