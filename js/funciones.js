@@ -138,20 +138,44 @@ function solucionTres() {
 }
 
 
+function mostraContadorMaxReinas(){
+    document.getElementById("contador").innerHTML = "<p>Contador: 8</p>"
+    contador = 8;
+}
+
 function cargarSoluciones() {
     var solucion = document.getElementById("soluciones").value;
     switch (solucion) {
         case "1":
             solucionUno();
+            mostraContadorMaxReinas();
             break;
         case "2":
             solucionDos();
+            mostraContadorMaxReinas();
             break;
         case "3":
             solucionTres();
+            mostraContadorMaxReinas();
             break;
         default:
             limpiarTablero();
+            document.getElementById("contador").innerHTML = "<p>Contador: 0</p>"
+            contador = 0;
             break;
     }
+}
+
+
+function reiniciar() {  
+    var cells = document.getElementById("tablero").getElementsByTagName("td"); //obtiene todos los eleementos de la tabla td
+    
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].style = "background-image:none;";
+        document.getElementById("contador").innerHTML = "<p>Contador: 0</p>"
+   
+        
+    }
+    contador = 0;
+    
 }
