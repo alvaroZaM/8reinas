@@ -170,12 +170,16 @@ function cargarSoluciones() {
 function reiniciar() {  
     var cells = document.getElementById("tablero").getElementsByTagName("td"); //obtiene todos los eleementos de la tabla td
     
+
+    document.getElementById('soluciones').selectedIndex = 0;
+
     for (let i = 0; i < cells.length; i++) {
         cells[i].style = "background-image:none;";
-        document.getElementById("contador").innerHTML = "<p>Contador: 0</p>"
+        
    
         
     }
+    document.getElementById("contador").innerHTML = "<p>Contador: 0</p>"
     contador = 0;
     
 }
